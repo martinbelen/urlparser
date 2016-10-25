@@ -1,0 +1,20 @@
+{
+  "name": "am-uriparser",
+  "main": "index.js",
+  "optionalDependencies": {},
+  "readmeFilename": "README.md",
+  "version": "0.1.0",
+  "private": false,
+  "engines": {
+    "node": "4.2.x",
+    "npm": "3.9.x"
+  },
+  "author": {
+    "name": "Inmigrantes"
+  },
+  "description": "Uri parser",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
+}
