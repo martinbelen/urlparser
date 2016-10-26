@@ -7,11 +7,11 @@
  * @return {String} replaced url path
  */
 module.exports = function (uri, opts){
-  var regex = undefined;
   Object.keys(opts).forEach(function (key) {
-    regex = new RegExp(":" + key, "g");
+    var regex = new RegExp(":" + key, "g");
     uri = uri.replace( regex, opts[key] || "");
   });
-  uri.replace(/\:[a-zA-Z0-9]*/g, "");
+  uri = uri.replace(/(&|\?)[a-zA-Z0-9-_]*=:[a-zA-Z0-9-_]*/g, '');
+  uri = (uri.indexOf('?') !== -1)? uri : uri.replace('&', '?');
   return uri;
 };
